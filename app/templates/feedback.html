@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Feedback</title><style>:root{font-family:Inter,system-ui,sans-serif;background:#f4f5f8;color:#111827}body{margin:0}.wrap{max-width:620px;margin:50px auto;padding:22px}
+.card{background:#fff;border:1px solid #e6e8ee;border-radius:22px;padding:28px}.field{width:100%;padding:13px;border:1px solid #d9dde6;border-radius:12px;margin-top:6px}
+label{display:block;font-size:13px;font-weight:800;margin-top:18px}button{width:100%;padding:14px;border:0;border-radius:12px;background:#111827;color:#fff;font-weight:800;margin-top:20px}</style></head>
+<body><div class="wrap"><div class="card"><div style="color:#4f46e5;font-weight:800">{{ location.business_name }}</div><h1>How was your experience?</h1><p>{{ location.location_name }}</p>
+<form method="post"><label>Rating</label><select class="field" name="rating" required><option value="5">5 - Excellent</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1 - Poor</option></select>
+<label>Category</label><select class="field" name="category" required><option value="service">Service</option><option value="staff">Staff</option><option value="speed">Speed</option><option value="cleanliness">Cleanliness</option><option value="price">Price</option><option value="other">Other</option></select>
+<label>Comment</label><textarea class="field" rows="5" name="comment" maxlength="1000"></textarea><button>Send feedback</button></form></div></div></body></html>

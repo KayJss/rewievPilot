@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReviewPilot</title><style>
+:root{font-family:Inter,system-ui,sans-serif;background:#f6f7fb;color:#111827}*{box-sizing:border-box}body{margin:0}
+.wrap{max-width:1120px;margin:auto;padding:28px}.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:72px}
+.brand{font-weight:800;font-size:22px}.badge{font-size:13px;padding:8px 12px;background:#eceffd;border-radius:999px;color:#3343a7}
+.hero{display:grid;grid-template-columns:1.35fr .8fr;gap:60px;align-items:center}h1{font-size:60px;line-height:1.02;letter-spacing:-2px;margin:0 0 22px}
+.lead{font-size:20px;line-height:1.55;color:#5b6270}.card{background:white;border:1px solid #e7e8ee;border-radius:22px;padding:26px;box-shadow:0 20px 70px rgba(30,41,59,.08)}
+label{display:block;font-size:13px;font-weight:700;margin:16px 0 7px}.input{width:100%;padding:14px;border:1px solid #d9dce6;border-radius:12px}
+button{margin-top:18px;width:100%;border:0;background:#111827;color:white;padding:15px;border-radius:12px;font-weight:800;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:80px}.mini{background:#fff;border:1px solid #e7e8ee;border-radius:18px;padding:22px}
+.muted{color:#707786;line-height:1.55;font-size:14px}@media(max-width:800px){.hero,.grid{grid-template-columns:1fr}h1{font-size:44px}}
+</style></head><body><div class="wrap"><div class="nav"><div class="brand">ReviewPilot</div><div class="badge">SaaS MVP</div></div>
+<section class="hero"><div><h1>Turn customer feedback into decisions.</h1><p class="lead">Collect feedback through a simple QR-ready link, spot recurring problems, and give small businesses a dashboard they can actually use.</p></div>
+<form class="card" action="/demo/setup" method="post"><h2 style="margin-top:0">Create demo workspace</h2><p class="muted">Set up a business and start collecting feedback.</p>
+<label>Business name</label><input class="input" name="business_name" placeholder="Northside Coffee" required>
+<label>First location</label><input class="input" name="location_name" placeholder="Main Street" required>
+<button>Launch demo</button></form></section>
+<section class="grid"><div class="mini"><b>QR-ready flow</b><p class="muted">Every location gets a unique feedback link.</p></div>
+<div class="mini"><b>Useful analytics</b><p class="muted">Average rating, low-score count, categories and recent comments.</p></div>
+<div class="mini"><b>Plan limits</b><p class="muted">Trial, Starter and Growth tiers are modeled in the service layer.</p></div></section>
+</div></body></html>

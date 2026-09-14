@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ business.name }} — ReviewPilot</title>
+<style>:root{font-family:Inter,system-ui,sans-serif;background:#f5f6fa;color:#111827}*{box-sizing:border-box}body{margin:0}.wrap{max-width:1180px;margin:auto;padding:28px}
+.top{display:flex;justify-content:space-between;align-items:center}.pill{padding:8px 12px;border-radius:999px;background:#e8ebff;color:#3843a5;font-size:12px;font-weight:800;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.metric,.panel{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:22px}
+.metric strong{font-size:34px}.label,.muted{color:#6b7280;font-size:13px}.layout{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:16px}.row{padding:14px 0;border-bottom:1px solid #edf0f4}
+.link{font-family:monospace;font-size:12px;word-break:break-all;background:#f3f4f6;padding:9px;border-radius:9px}@media(max-width:800px){.grid,.layout{grid-template-columns:1fr}}</style></head>
+<body><div class="wrap"><div class="top"><div><div class="muted">ReviewPilot workspace</div><h1>{{ business.name }}</h1></div><span class="pill">{{ business.plan }}</span></div>
+<div class="grid"><div class="metric"><div class="label">Total feedback</div><strong>{{ metrics.total_feedback }}</strong></div><div class="metric"><div class="label">Average rating</div><strong>{{ metrics.average_rating }}</strong></div><div class="metric"><div class="label">Low ratings</div><strong>{{ metrics.low_rating_count }}</strong></div></div>
+<div class="layout"><div class="panel"><h2>Recent feedback</h2>{% if recent_feedback %}{% for item in recent_feedback %}<div class="row"><b>{{ item.rating }}/5</b> · {{ item.category }} · {{ item.location_name }}{% if item.comment %}<div>{{ item.comment }}</div>{% endif %}</div>{% endfor %}{% else %}<p class="muted">No feedback yet.</p>{% endif %}</div>
+<div><div class="panel"><h2>Insights</h2>{% for insight in insights %}<div class="row">{{ insight }}</div>{% endfor %}</div>
+<div class="panel" style="margin-top:16px"><h2>Feedback links</h2>{% for location in locations %}<div class="row"><b>{{ location.name }}</b><div class="link">/f/{{ location.token }}</div></div>{% endfor %}</div></div></div>
+</div></body></html>
